@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Searcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="title">Voice and Typing Gallery</div>
+        <input onclick="talk()" type="text" id="speechToText" placeholder="Enter Keyword">
+        <div id="results"></div>
+    </main>
+
+    <script>
+        function talk() {
+            var recognition = new window.SpeechRecognition || new window.webkitSpeechRecognition();
+            recognition.lang = "en-gb";
+            recognition.onresult = function(event) {
+                console.log(event);
+                document.getElementById("speechToText").value = event.results[0][0].transcript;
+            } 
+            recognition.start();
+        }
+    </script>
+    <script src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* Resetting box-sizing and basic styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3494E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Main container styles */
+main {
+    text-align: center;
+    padding: 40px; /* Add padding for better spacing */
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+/* Title styles */
+.title {
+    font-size: 2rem; /* Responsive font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px; /* Adjust spacing */
+    color: #2c3e50; /* Dark blue text color */
+}
+
+/* Input field styles */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1.2rem;
+    text-align: center;
+    background: #f9f9f9; /* Light background */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db; /* Highlight on focus */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Focus border */
+}
+
+/* Image grid styles */
+#results {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+/* Result image styles */
+.result-img {
+    height: 200px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    /* You'll need to set background images dynamically in JavaScript */
+}
